@@ -2,16 +2,16 @@ language: ruby
 rvm:
   - 2.5.0
 
+services:
+  - postgresql
+
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -c 'create database coinmine_canary_test;' -U postgres
   - bin/rake db:migrate RAILS_ENV=test
 
 script:
   - bundle exec rspec
-
-services:
-  - postgresql
 
 notifications:
   email: false

@@ -57,6 +57,8 @@ gem 'omniauth-twitter'
 
 # Helps store user sessions in the db, overcomes 4kb limit for session data
 gem 'activerecord-session_store'
+
+# also dotenv gem which has been added below
 # END OmniAuth
 
 group :development, :test do
@@ -72,6 +74,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Use dotenv for environment variables & keep 3rd party app information secret
+  gem 'dotenv', '~> 2.2.1'
 end
 
 

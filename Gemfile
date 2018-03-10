@@ -48,7 +48,13 @@ source 'https://rails-assets.org' do
 end
 # END Bootstrap related Gems
 
+# User authentication
 gem 'devise'
+
+# BEGIN OmniAuth related Gems...
+# twitter integration
+gem 'omniauth-twitter'
+# END OmniAuth
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

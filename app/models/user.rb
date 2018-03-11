@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable,
-         :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
+         :timeoutable, :omniauthable, omniauth_providers: [:twitter]
 
   def self.create_from_provider_data(provider_data)
     where(provider: provider_data.provider, uid: provider_data.uid).first_or_create do | user |
@@ -13,6 +13,7 @@ class User < ApplicationRecord
       user.image = provider_data.info.image
       user.description = provider_data.info.description
       user.skip_confirmation!
+      user.save!
     end
   end
 end

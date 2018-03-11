@@ -65,7 +65,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
   # Use dotenv for environment variables & keep 3rd party app information secret
-  gem 'dotenv', '~> 2.2.1'
+  gem 'dotenv-rails', '~> 2.2.1'
 end
 
 group :development do

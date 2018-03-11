@@ -11,9 +11,8 @@ RSpec.describe PagesController, type: :controller do
 
   describe "GET #crypto_news" do
     it "returns http success" do
-      get :crypto_news
+      get :crypto_feed
       expect(response).to have_http_status(:success)
     end
   end
-
 end

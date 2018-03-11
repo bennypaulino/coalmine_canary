@@ -5,6 +5,5 @@ class PagesController < ApplicationController
 
   def crypto_feed
     @crypto_tweets = SocialTool.crypto_news
-    @user = current_user
   end
 end

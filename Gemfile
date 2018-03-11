@@ -54,10 +54,9 @@ gem 'devise'
 # BEGIN OmniAuth related Gems...
 # twitter integration
 gem 'omniauth-twitter'
-
 # Helps store user sessions in the db, overcomes 4kb limit for session data
 gem 'activerecord-session_store'
-
+gem 'twitter', '~> 6.2'
 # also dotenv gem which has been added below
 # END OmniAuth
 

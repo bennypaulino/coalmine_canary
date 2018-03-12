@@ -15,4 +15,8 @@ module SocialTool
   def self.user_timeline(qty)
     @@client.user_timeline(count: qty)
   end
+
+  def self.update(msg)
+    @@client.update(msg)
+  end
 end

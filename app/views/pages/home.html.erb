@@ -1,7 +1,9 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= @history.each do |tweet| %>
-  <p>
-    <%= tweet.text %>
-  </p>
-<% end %>
+<ul>
+  <%= @history.each do |tweet| %>
+    <li>
+      <%= tweet.text %>
+    </li>
+  <% end %>
+</ul>

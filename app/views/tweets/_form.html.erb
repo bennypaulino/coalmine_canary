@@ -1,0 +1,22 @@
+<form>
+  <%= form_for(@tweet) do |f| %>
+    <% if @tweet.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@tweet.errors.count, "error") %> kept this tweet from being posted</h2>
+        <ul>
+          <% @tweet.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p class="field">
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+    <section class="actions"%>
+      <%= f.submit "Post", class: 'btn-info'%>
+    </section>
+  <% end %>
+</form>

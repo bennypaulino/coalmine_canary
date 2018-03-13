@@ -1,3 +1,15 @@
-<h1>Pages#crypto_news</h1>
-<p>Find me in app/views/pages/crypto_news.html.erb</p>
-<%= @crypto_tweets.inspect %>
+<br>
+<h1 class="pageTitle">Pages#crypto_news</h1>
+<br>
+<section class="container">
+  <p>Find me in app/views/pages/crypto_news.html.erb</p>
+
+  <ol>
+    <%= @crypto_tweets.each do |tweet| %>
+      <li>
+        <%= tweet %>
+      </li>
+      <br>
+    <% end %>
+  </ol>
+</section>

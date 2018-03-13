@@ -6,6 +6,7 @@ class TweetsController < ApplicationController
 
   def new
     @tweet = Tweet.new
+    # @tweet = Tweet.create(tweet_params)
     # @tweet.post_to_twitter(tweet_params[:body])
     # if tweet_params[:tweet][:body].present?
     if tweet_params[:body].present?
@@ -35,6 +36,7 @@ class TweetsController < ApplicationController
   private
 
   def tweet_params
-    params.require(:tweet).permit(:body)
+    params.permit(:body)
+    # params.require(:tweet).permit(:body)
   end
 end

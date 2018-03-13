@@ -1,0 +1,10 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<ul>
+  <%= @history.each do |tweet| %>
+    <li>
+      <%= tweet.text %>
+    </li>
+    <br>
+  <% end %>
+</ul>

@@ -54,10 +54,9 @@ gem 'devise'
 # BEGIN OmniAuth related Gems...
 # twitter integration
 gem 'omniauth-twitter'
-
 # Helps store user sessions in the db, overcomes 4kb limit for session data
 gem 'activerecord-session_store'
-
+gem 'twitter', '~> 6.2'
 # also dotenv gem which has been added below
 # END OmniAuth
 
@@ -66,7 +65,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.7'
   # Use dotenv for environment variables & keep 3rd party app information secret
-  gem 'dotenv', '~> 2.2.1'
+  gem 'dotenv-rails', '~> 2.2.1'
 end
 
 group :development do

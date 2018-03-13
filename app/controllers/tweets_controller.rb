@@ -14,16 +14,16 @@ class TweetsController < ApplicationController
     end
   end
 
-  def create
-    @tweet = Tweet.create(tweet_params, user_id: current_user.id)
-    # @tweet.user_id = current_user.id
-    if @tweet.save
-      redirect_to root_path, notice: 'Your tweet will definitely go viral! Noice!!'
-    else
-      render 'new'
-    end
-    respond_with(@tweet)
-  end
+  # def create
+  #   @tweet = Tweet.create(tweet_params, user_id: current_user.id)
+  #   # @tweet.user_id = current_user.id
+  #   if @tweet.save
+  #     redirect_to root_path, notice: 'Your tweet will definitely go viral! Noice!!'
+  #   else
+  #     render 'new'
+  #   end
+  #   respond_with(@tweet)
+  # end
 
   def update
     if tweet_params[:body].present?
